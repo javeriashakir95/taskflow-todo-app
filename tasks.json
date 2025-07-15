@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Buy groceries",
+        "date": "2025-07-16",
+        "time": "18:00",
+        "done": true
+    },
+    {
+        "title": "Call HR Intelligence",
+        "date": "2025-07-18",
+        "time": "10:30",
+        "done": false
+    },
+    {
+        "title": "Finish Python GUI project",
+        "date": "2025-07-20",
+        "time": "15:00",
+        "done": false
+    },
+    {
+        "title": "Team meeting - internship review",
+        "date": "2025-07-19",
+        "time": "14:00",
+        "done": true
+    },
+    {
+        "title": "Update LinkedIn portfolio",
+        "date": "2025-07-22",
+        "time": "17:00",
+        "done": true
+    },
+    {
+        "title": "Watch Dev Insight video",
+        "date": "2025-07-15",
+        "time": "19:00",
+        "done": true
+    },
+    {
+        "title": "Read article on UX trends",
+        "date": "2025-07-21",
+        "time": "11:30",
+        "done": false
+    },
+    {
+        "title": "Design UI mockup for coffee app",
+        "date": "2025-07-24",
+        "time": "13:00",
+        "done": false
+    },
+    {
+        "title": "Client feedback call (Figma design)",
+        "date": "2025-07-23",
+        "time": "09:30",
+        "done": false
+    },
+    {
+        "title": "Complete Aptech assignment",
+        "date": "2025-07-26",
+        "time": "16:00",
+        "done": false
+    },
+    {
+        "title": "take a deep breath",
+        "date": "2025-07-15",
+        "time": "15:00",
+        "done": false
+    }
+]
