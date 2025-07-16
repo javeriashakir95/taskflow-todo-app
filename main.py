@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
@@ -148,6 +147,10 @@ class TaskFlowApp:
             self.title_entry.insert(0, task["title"])
             self.date_entry.set_date(datetime.strptime(task["date"], "%Y-%m-%d"))
             self.time_entry.insert(0, task.get("time", ""))
+        else:
+            now = datetime.now()
+            self.date_entry.set_date(now.date())
+            self.time_entry.insert(0, now.strftime("%H:%M"))
 
         tk.Button(self.main_frame, text="💾 Save Task", command=lambda: self.save_task(edit_index), bg="#A3D9A5", fg=COLOR_TEXT_DARK, font=("Helvetica", 13, "bold"), width=20).pack(pady=20)
 
@@ -159,7 +162,7 @@ class TaskFlowApp:
                 break
         self.save_tasks()
         self.update_excel_file()
-        self.show_home()
+        self.root.after(100, self.show_home)
 
     def delete_task(self, index):
         task_to_delete = self.filtered_tasks[index]
@@ -196,6 +199,10 @@ class TaskFlowApp:
         self.save_tasks()
         self.update_excel_file()
         messagebox.showinfo("Success", "Task saved!")
+
+        self.title_entry.delete(0, tk.END)
+        self.time_entry.delete(0, tk.END)
+
         self.filtered_tasks = self.tasks.copy()
         self.show_home()
 
@@ -255,3 +262,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = TaskFlowApp(root)
     root.mainloop()
+
